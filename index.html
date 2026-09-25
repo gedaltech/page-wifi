@@ -6,6 +6,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
     <script src="tailwind.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: 'Inter';
+      }
+    </style>
   </head>
   <body>
     <img
@@ -17,56 +28,90 @@
     <div class="z-index-20">
       <div class="flex flex-col items-center text-center">
         <img src="iconeWifi.png " alt="" class="md:w-40 md:h-40 w-10 h-10" />
-        <h1 class="md:text-4xl md:text-2xl text-xl">GOSPO-DEPO</h1>
+        <h1 class="text-xl md:text-2xl">GOSPO-DEPO</h1>
         <h2 class="text-amber-600 md:text-3xl ext-xl">Wifi Zone</h2>
         <img src="trat.png" alt="" class="md:w-60 w-40" />
       </div>
-      <div class="md:flex">
+      <div
+        class="grid grid-cols-1 lg:grid lg:grid-cols-2 justify-center items-center"
+      >
         <div>
-          <div class="flex ml-24 md:ml-80 md:mt-2">
-            <img src="icone1.png" alt="" class="w-10 h-10" />
-            <div class="text-amber-50">
+          <div class="flex justify-center align-center md:mt-2">
+            <!-- <img src="icone1.png" alt="" class="w-10 h-10" /> -->
+            <div class="text-amber-50 text-center w-full">
               <h3 class="md:text-3xl md:font-bold ext-xl font-bold">
                 Bienvenue
               </h3>
-              <p class="md:text-2xl md:text-xl">
+              <p class="text-xl md:text-2xl">
                 Connectez-vous et profitez d'une
               </p>
-              <p class="md:text-2xl md:text-xl">
+              <p class="text-xl md:text-2xl">
                 connection internet rapide et stable
               </p>
             </div>
           </div>
-          <div class="md:ml-64 md:mt-10 md:ml-24 mt-7 ml-20 ">
+          <div class="mt-4 md:mt-8">
             <div class="space-x-4">
-              <!-- <input
-              type="text"
-              class="rounded-2xl p-3.5 hover:bg-blue-200" id="CONECTEZ" name="CONECTEZ"
-              laceholder="Connectez-vous"
-            /> -->
-              <input
-                type="text"
-                class="md:rounded-2xl md:p-3.5 md:hover:bg-blue-200 md:placeholder-blue-500 rounded-2xl p-2 hover:bg-blue-200 placeholder-blue-500 w-40 mr-[-4px]"
-                id="CONECTEZ"
-                name="CONECTEZ"
-                placeholder="COMPTE"
-              />
-              <input
-                type="conectez"
-                class="md:rounded-2xl md:p-3.5 md:hover:bg-blue-200  rounded-2xl placeholder-blue-500 w-40 p-2"
-              />
+              <div class="flex justify-center space-x-4">
+                <button
+                  id="timeCode"
+                  type="button"
+                  class="rounded-xl bg-gray-300 px-4 py-1.5 md:px-6 uppercase font-semibold"
+                >
+                  Code temps
+                </button>
+                <button
+                  id="account"
+                  type="button"
+                  onclick="intercepterAccount()"
+                  class="rounded-xl bg-gray-300 px-4 py-1.5 md:px-6 uppercase font-semibold"
+                >
+                  Comptes
+                </button>
+              </div>
+
+              <div class="flex space-y-1 mt-4 flex-col">
+                <input
+                  type="text"
+                  class="w-[450px] rounded px-2 py-1 md:px-3 md:py-1.5 md:hover:bg-blue-200 hover:bg-blue-200 md:w-full placeholder:uppercase"
+                  id="login"
+                  name="login"
+                  placeholder="Code temps"
+                />
+
+                <div class="w-[450px] md:w-full ">
+                  <input
+                    type="password"
+                    class="rounded px-2 py-1 md:px-3 md:py-1.5 md:hover:bg-blue-200 hover:bg-blue-200 hidden"
+                    id="password"
+                    name="password"
+                    placeholder="Mot de passe"
+                  />
+                  <img
+                    src="eye.svg"
+                    alt=""
+                    class="w-8 h-8 relative left-[400px] pt-4   bottom-10 md:w-10 md:h-10 md:relative md:left-[730px]"
+                    onclick="pesswordHidne()"
+                    id="eyeicn"
+                  />
+                  <!-- <img src="eyes.svg" alt="" class="w-8 h-8 relative left-[200px] bottom-10 hidd cursor-pointer md:w-10 md:h-10 md:relative md:left-[720px]"
+                  onclick="iconImags()"
+                  id="iconeyes"/> -->
+                </div>
+              </div>
             </div>
+
             <div class="md:mt-7 md:ml-24 mt-7 ml-12">
               <input
                 type="conectez"
-                class="md:rounded-2xl md:p-3.5 hover:bg-blue-200 md:placeholder-blue-500 md:text-center rounded-2xl p-2 hover:bg-blue-200 placeholder-blue-500 text-center"
+                class="md:rounded-2xl md:p-3.5 md:placeholder-blue-500 md:text-center rounded-2xl p-2 hover:bg-blue-200 placeholder-blue-500 text-center"
                 placeholder="CONECTEZ"
               />
             </div>
           </div>
         </div>
 
-        <div class="grid grid-cols-4 md:grid-cols-4" id="paraVn">
+        <div class="grid grid-cols-4 md:grid-cols-4 mb-4 md:mb-8" id="paraVn">
           <!-- <div class="p-4 flex flex-col">
           <div class="rounded-full bg-blue-800 p-5">
             <img src="pp.jpg" alt="" class="h-20 w-20" />
@@ -85,7 +130,7 @@
         </div>
       </div>
       <div
-        class="md:bg-blue-950 md:text-amber-50 md:flex md:relative md:top-[65px] md:rounded-full mt-10 bg-blue-950 text-amber-50 flex rounded-full relative top-[30px]"
+        class="md:bg-blue-950 md:text-amber-50 md:flex md:relative md:top-16.25 md:rounded-full mt-10 bg-blue-950 text-amber-50 flex rounded-full relative top-7.5"
       >
         <marquee behavior="" direction="">
           <img src="" alt="" />
