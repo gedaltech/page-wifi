@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,16 +18,16 @@
       }
     </style>
   </head>
-  <body>
+  <body class="relative w-full min-h-screen">
     <img
       src="bgo.png"
       alt=""
-      class="justify-center absolute inset-0 md:w-full md:h-full object-cover -z-10 h-full w-full"
+      class="absolute inset-0 w-full h-full object-cover -z-10"
     />
-    <div class="bg-black/50 inset-0 absolute justify-center -z-10"></div>
-    <div class="z-index-20">
+    <div class="bg-black/50 absolute inset-0 -z-10"></div>
+    <div class="z-20">
       <div class="flex flex-col items-center text-center">
-        <img src="iconeWifi.png " alt="" class="md:w-40 md:h-40 w-10 h-10" />
+        <img src="iconeWifi.png" +alt="" class="md:w-40 md:h-40 w-10 h-10" />
         <h1 class="text-xl md:text-2xl">GOSPO-DEPO</h1>
         <h2 class="text-amber-600 md:text-3xl ext-xl">Wifi Zone</h2>
         <img src="trat.png" alt="" class="md:w-60 w-40" />
@@ -73,16 +73,16 @@
               <div class="flex space-y-1 mt-4 flex-col">
                 <input
                   type="text"
-                  class="w-[450px] rounded px-2 py-1 md:px-3 md:py-1.5 md:hover:bg-blue-200 hover:bg-blue-200 md:w-full placeholder:uppercase"
+                  class="rounded px-2 py-1 md:px-3 md:py-1.5 md:hover:bg-blue-200 hover:bg-blue-200 w-full placeholder:uppercase"
                   id="login"
                   name="login"
                   placeholder="Code temps"
                 />
 
-                <div class="w-[450px] md:w-full ">
+                <div class="w-full relative">
                   <input
                     type="password"
-                    class="rounded px-2 py-1 md:px-3 md:py-1.5 md:hover:bg-blue-200 hover:bg-blue-200 hidden"
+                    class="rounded w-full px-2 py-1 pr-10 md:px-3 md:py-1.5 md:hover:bg-blue-200 hover:bg-blue-200 hidden"
                     id="password"
                     name="password"
                     placeholder="Mot de passe"
@@ -90,7 +90,7 @@
                   <img
                     src="eye.svg"
                     alt=""
-                    class="w-8 h-8 relative left-[400px] pt-4   bottom-10 md:w-10 md:h-10 md:relative md:left-[730px]"
+                    class="w-6 h-6 md:w-7 md:h-7 absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer"
                     onclick="pesswordHidne()"
                     id="eyeicn"
                   />
@@ -101,13 +101,13 @@
               </div>
             </div>
 
-            <div class="md:mt-7 md:ml-24 mt-7 ml-12">
+            <!-- <div class="md:mt-7 md:ml-24 mt-7 ml-12">
               <input
                 type="conectez"
                 class="md:rounded-2xl md:p-3.5 md:placeholder-blue-500 md:text-center rounded-2xl p-2 hover:bg-blue-200 placeholder-blue-500 text-center"
                 placeholder="CONECTEZ"
               />
-            </div>
+            </div> -->
           </div>
         </div>
 
@@ -130,19 +130,28 @@
         </div>
       </div>
       <div
-        class="md:bg-blue-950 md:text-amber-50 md:flex md:relative md:top-16.25 md:rounded-full mt-10 bg-blue-950 text-amber-50 flex rounded-full relative top-7.5"
+        class="md:bg-blue-950 md:text-amber-50 md:relative md:top-[4.0625rem] md:rounded-full mt-10 bg-blue-950 text-amber-50 rounded-full relative top-[1.875rem] overflow-hidden whitespace-nowrap"
       >
-        <marquee behavior="" direction="">
+        <!-- <marquee behavior="" direction="">
           <img src="" alt="" />
           <div class="text-gray-50">
             <h1>BESOIN D'AIDE</h1>
             <h2>Contactes-nous sur Whachapp</h2>
             <p>93 53 45 14</p>
           </div>
-        </marquee>
+        </marquee> -->
+        <!-- <div class=""> -->
+          <div class=" animate-[scroll_30s_linear_infinite]">
+            <h1>BESOIN D'AIDE</h1>
+            <h2>Contactes-nous sur Whachapp</h2>
+            <p>93 53 45 14</p>
+          </div>
+        <!-- </div> -->
       </div>
 
-      <script src="javaScripte.js"></script>
+      <!-- <script src="javaScripte.js"></script> -->
+       <script src="javaScripte.js"></script>
+<script>intercepterCodeTemps();</script>
     </div>
   </body>
 </html>

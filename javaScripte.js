@@ -108,7 +108,7 @@ function intercepterCodeTemps () {
   codeTempsInput.placeholder = 'Code temps'
   const passwordInput = document.getElementById('password')
   passwordInput.className =
-    'w-[450px] rounded px-2 py-1 md:px-3 md:py-1.5 md:hover:bg-blue-200 hover:bg-blue-200 w-full hidden'
+    'rounded px-2 py-1 md:px-3 md:py-1.5 md:hover:bg-blue-200 hover:bg-blue-200 w-full hidden'
     const iconImag = document.getElementById('eyeicn');
     iconImag.className = `w-10 h-10 relative left-180 bottom-10 hidden`;
     
@@ -121,7 +121,7 @@ function intercepterAccount () {
   codeTempsInput.placeholder = 'Identifiant'
   const passwordInput = document.getElementById('password')
   passwordInput.className =
-    'w-[450px] rounded px-2 py-1 md:px-3 md:py-1.5 md:hover:bg-blue-200 hover:bg-blue-200 w-full '
+    'rounded px-2 py-1 md:px-3 md:py-1.5 md:hover:bg-blue-200 hover:bg-blue-200 w-full '
     const iconImag = document.getElementById('eyeicn');
     iconImag.className = `w-8 h-8 relative left-[400px] pt-4   bottom-10 md:w-10 md:h-10 md:relative md:left-[730px] `;
     
